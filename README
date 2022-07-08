@@ -1,0 +1,29 @@
+TTRP Movement Calculator
+
+A script to keep track of where TTRP entities (players, enemies, etc.)
+are on the board. Given an entity's stats, it will restrict you based
+on movement speed and how many "movements" can be made on a turn.
+
+Input (Planned)
+
+1) Board Size
+    Tell the script how large the board is so that it knows what to
+    keep track of. You can also add details like the size of a
+    single space (2D or 3D).
+
+2) Add Entity Profiles
+    Can create them in the script, or save them to load later.
+
+
+Functionality (Planned)
+
+1) Choose an entity and where to move it (You can enforce game rules,
+or disable them to place an entity anywhere on the board).
+
+2) Undo a previous move.
+
+3) Add or remove an entity at any time.
+
+UI (Planned)
+
+1 Create a window that displays entities at their recorded locations
