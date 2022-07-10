@@ -1,4 +1,3 @@
-from cmath import sqrt
 from math import floor
 
 
@@ -9,22 +8,34 @@ sides = int(input())
 #main
 while(option != 'q'):
 
-    print("Enter current coordinates (if no z, enter 0)")
-    x = int(input("x: "))
-    y = int(input("y: "))
-    z = int(input("z: "))
+    print("Do you have grid coordinates, or distances? (g/d)")
+    gridDist = input(": ")
 
-    print("Enter coordinates of the space you wish to go to (if no z, enter 0)")
-    xm = int(input("x: "))
-    ym = int(input("y: "))
-    zm = int(input("z: "))
+    if(gridDist == 'g'):
 
-    print("Calculating...")
+        print("Enter current coordinates (if no z, enter 0)")
+        x = int(input("x: "))
+        y = int(input("y: "))
+        z = int(input("z: "))
 
-    #Calculate the differences between destination and origin
-    xd = abs(xm - x)
-    yd = abs(ym - y)
-    zd = abs(zm - z)
+        print("Enter coordinates of the space you wish to go to (if no z, enter 0)")
+        xm = int(input("x: "))
+        ym = int(input("y: "))
+        zm = int(input("z: "))
+
+        print("Calculating...")
+
+        #Calculate the differences between destination and origin
+        xd = abs(xm - x)
+        yd = abs(ym - y)
+        zd = abs(zm - z)
+
+    if(gridDist == 'd'):
+
+        print("Enter distances on each axis (if no z, enter 0")
+        xd = int(input("x: "))
+        yd = int(input("y: "))
+        zd = int(input("z: "))
 
     #Using triangle side lengths, peform pyth to get distance
     c = ((xd**2) + (yd**2) + (zd**2))**0.5
@@ -41,4 +52,3 @@ while(option != 'q'):
 
     print("If you wish to run another calculation, hit enter. If not, hit q then enter.")
     option = input()
-    print(option)
