@@ -26,13 +26,13 @@ while(option != 'q'):
         print("Calculating...")
 
         #Calculate the differences between destination and origin
-        xd = abs(xm - x)
-        yd = abs(ym - y)
-        zd = abs(zm - z)
+        xd = abs((xm - x) - 1)
+        yd = abs((ym - y) - 1)
+        zd = abs((zm - z) - 1)
 
     if(gridDist == 'd'):
 
-        print("Enter distances on each axis (if no z, enter 0")
+        print("Enter distances (not counting the square you are on) on each axis (if no z, enter 0")
         xd = int(input("x: "))
         yd = int(input("y: "))
         zd = int(input("z: "))
